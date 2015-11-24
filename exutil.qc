@@ -188,7 +188,7 @@ void () EndVote =
 
 void () NewGame =
 {
-	if (self.coop_admin > 1) {
+	if (self.coop_admin > 1 || GetPlayerCount() == 1) {
 		serverflags = 0;
 		localcmd("map start\n");
 		return;
@@ -220,12 +220,6 @@ void () NewGame =
 		return;
 	}
 
-	if (GetPlayerCount() <= 1)
-	{
-		sprint(self, PRINT_HIGH, "More players required to vote!\n");
-		return;
-	}
-	
 	ResetAllVotes();
 	
 	bprint(PRINT_HIGH, self.netname);
