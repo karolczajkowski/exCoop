@@ -113,8 +113,10 @@ void() finale_1 =
 	local entity	timer;
 
 
-	intermission_exittime = time + 5;	// never allow exit
+	intermission_exittime = time + 15;
 	intermission_running = 1;
+
+	nextmap = "start";
 
 	// find the intermission spot
 	pos = find (world, classname, "info_intermission");
@@ -192,7 +194,7 @@ void() finale_4 =
 	local	float	x, y, z;
 	local	float	r;
 	local entity	n;
-	nextmap = "start";
+
 	sound (self, CHAN_VOICE, "boss2/pop2.wav", 1, ATTN_NORM);
 	
 	oldo = self.origin;
