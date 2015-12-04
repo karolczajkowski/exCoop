@@ -709,7 +709,7 @@ void(entity killer, entity killee) logfrag = #79;       // add to stats
 // new comm
 void(entity client, string s, string s, string s, string s) centerprint4 = #73;
 void(entity client, string s, string s, string s, string s, string s) centerprint5 = #73;
-string (string) ParseClass;
+string(string s) ParseClass;
 
 string(entity e, string key) infokey    = #80;  // get a key value (world = serverinfo)
 float(string s) stof                            = #81;          // convert string to float
