@@ -504,7 +504,8 @@ void() respawn =
 		// make a copy of the dead body for appearances sake
 		CopyToBodyQue (self);
 		// get the spawn parms as they were at level start
-		setspawnparms (self);
+		// setspawnparms (self); David 09-03-2016 Issue #3
+		SetNewParms ();
 		
 		// mighty hack alert!
 		// frags should not reset to level start amount
